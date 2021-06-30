@@ -29,4 +29,15 @@ body {
   font-weight: bolder;
   font-size: 25px;
   cursor: pointer;
+  width: 200px;
+  height: 200px;
+}
+.r {
+  background: royalblue;
+}
+.p {
+  background: plum;
+}
+.s {
+  background: slategray;
 }
