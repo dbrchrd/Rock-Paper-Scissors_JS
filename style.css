@@ -5,8 +5,12 @@
   padding: 0;
   font-family: "Nunito", sans-serif;
 }
-
+.player {
+  display: flex;
+  flex-direction: column;
+}
 .card {
   font-weight: bolder;
   font-size: 25px;
+  cursor: pointer;
 }
