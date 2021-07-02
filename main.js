@@ -8,6 +8,7 @@ let bot_card = document.querySelectorAll(".cardbot");
 let rock_card_bot = bot_card[0];
 let paper_card_bot = bot_card[1];
 let scissors_card_bot = bot_card[2];
+let end_screen = document.querySelector(".end-screen");
 // console.log(rock_card, paper_card, scissors_card);
 const bot_play = () => {
   let bot_card_int = parseInt((Math.random() * (3 - 1 + 1)), 10) + 1;
@@ -51,6 +52,7 @@ rock_card.onclick = () => {
   rock_card.style.display = "flex";
   paper_card.style.display = "none";
   scissors_card.style.display = "none";
+  end_screen.style.zIndex = "10000";
 }
 paper_card.onclick = () => {
   console.log("paper");
@@ -60,6 +62,7 @@ paper_card.onclick = () => {
   rock_card.style.display = "none";
   paper_card.style.display = "flex";
   scissors_card.style.display = "none";
+  end_screen.style.zIndex = "10000";
 }
 scissors_card.onclick = () => {
   console.log("scissors");
@@ -69,4 +72,8 @@ scissors_card.onclick = () => {
   rock_card.style.display = "none";
   paper_card.style.display = "none";
   scissors_card.style.display = "flex";
+  end_screen.style.zIndex = "10000";
+}
+end_screen.onclick = () => {
+  window.location.reload()
 }
