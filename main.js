@@ -27,3 +27,13 @@ rock_card.onclick = async () => {
   card = "r";
   console.log(bot_play());
 }
+paper_card.onclick = () => {
+  console.log("paper");
+  card = "p";
+  console.log(bot_play());
+}
+scissors_card.onclick = () => {
+  console.log("scissors");
+  card = "s";
+  console.log(bot_play());
+}
