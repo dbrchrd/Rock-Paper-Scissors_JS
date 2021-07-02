@@ -26,6 +26,23 @@ const bot_play = () => {
   }
   return bot_card;
 }
+const bot_display = () => {
+  if (bot_card_l === "r") {
+    rock_card_bot.style.display = "flex";
+    paper_card_bot.style.display = "none";
+    scissors_card_bot.style.display = "none";
+  }
+  if (bot_card_l === "p") {
+    rock_card_bot.style.display = "none";
+    paper_card_bot.style.display = "flex";
+    scissors_card_bot.style.display = "none";
+  }
+  if (bot_card_l === "s") {
+    rock_card_bot.style.display = "none";
+    paper_card_bot.style.display = "none";
+    scissors_card_bot.style.display = "flex";
+  }
+}
 rock_card.onclick = () => {
   console.log("rock");
   card = "r";
