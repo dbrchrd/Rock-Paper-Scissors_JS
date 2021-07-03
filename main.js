@@ -70,6 +70,14 @@ const result = () => {
     playerWin();
   }
 }
+const playerWin = () => {
+  player.style.backgroundImage = "linear-gradient(to right, #0F0 40%, #FF0)";
+  bot.style.backgroundImage = "linear-gradient(to left, #F00 40%, #FF0)";
+}
+const botWin = () => {
+  player.style.backgroundImage = "linear-gradient(to right, #F00 40%, #FF0)";
+  bot.style.backgroundImage = "linear-gradient(to left, #0F0 40%, #FF0)";
+}
 rock_card.onclick = () => {
   // console.log("rock");
   card = "r";
