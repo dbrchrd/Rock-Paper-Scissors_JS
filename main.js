@@ -1,3 +1,6 @@
+let player = document.querySelectorAll(".player")[0];
+let bot = document.querySelectorAll(".player")[1];
+let win = "nobody";
 let player_card = document.querySelectorAll(".card");
 let rock_card = player_card[0];
 let paper_card = player_card[1];
@@ -10,7 +13,7 @@ let paper_card_bot = bot_card[1];
 let scissors_card_bot = bot_card[2];
 let end_screen = document.querySelector(".end-screen");
 // console.log(rock_card, paper_card, scissors_card);
-const bot_play = () => {
+const botPlay = () => {
   let bot_card_int = parseInt((Math.random() * (3 - 1 + 1)), 10) + 1;
   switch (bot_card_int) {
     case 1:
@@ -27,7 +30,7 @@ const bot_play = () => {
   }
   return bot_card;
 }
-const bot_display = () => {
+const botDisplay = () => {
   if (bot_card_l === "r") {
     rock_card_bot.style.display = "flex";
     paper_card_bot.style.display = "none";
@@ -45,34 +48,37 @@ const bot_display = () => {
   }
 }
 rock_card.onclick = () => {
-  console.log("rock");
+  // console.log("rock");
   card = "r";
-  console.log(bot_play());
-  bot_display();
+  botPlay();
+  botDisplay();
   rock_card.style.display = "flex";
   paper_card.style.display = "none";
   scissors_card.style.display = "none";
   end_screen.style.zIndex = "10000";
+  result();
 }
 paper_card.onclick = () => {
-  console.log("paper");
+  // console.log("paper");
   card = "p";
-  console.log(bot_play());
-  bot_display();
+  botPlay();
+  botDisplay();
   rock_card.style.display = "none";
   paper_card.style.display = "flex";
   scissors_card.style.display = "none";
   end_screen.style.zIndex = "10000";
+  result();
 }
 scissors_card.onclick = () => {
-  console.log("scissors");
+  // console.log("scissors");
   card = "s";
-  console.log(bot_play());
-  bot_display();
+  botPlay();
+  botDisplay();
   rock_card.style.display = "none";
   paper_card.style.display = "none";
   scissors_card.style.display = "flex";
   end_screen.style.zIndex = "10000";
+  result();
 }
 end_screen.onclick = () => {
   window.location.reload()
