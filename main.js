@@ -50,6 +50,7 @@ const botDisplay = () => {
 const result = () => {
   if (card === bot_card_l) {
     console.log("Equality");
+    equality();
   } else if (card === "s" && bot_card_l === "r") {
     console.log("Rock breaks the scissors\nBot win");
     botWin();
@@ -77,6 +78,10 @@ const playerWin = () => {
 const botWin = () => {
   player.style.backgroundImage = "linear-gradient(to right, #F00 40%, #FF0)";
   bot.style.backgroundImage = "linear-gradient(to left, #0F0 40%, #FF0)";
+}
+const equality = () => {
+  player.style.background = "#FF0";
+  bot.style.background = "#FF0";
 }
 rock_card.onclick = () => {
   // console.log("rock");
