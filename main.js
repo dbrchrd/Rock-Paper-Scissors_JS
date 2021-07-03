@@ -47,6 +47,29 @@ const botDisplay = () => {
     scissors_card_bot.style.display = "flex";
   }
 }
+const result = () => {
+  if (card === bot_card_l) {
+    console.log("Equality");
+  } else if (card === "s" && bot_card_l === "r") {
+    console.log("Rock breaks the scissors\nBot win");
+    botWin();
+  } else if (card === "r" && bot_card_l === "s") {
+    console.log("Rock breaks the scissors\nPlayer win");
+    playerWin();
+  } else if (card === "r" && bot_card_l === "p") {
+    console.log("Paper covers rock\nBot win");
+    botWin();
+  } else if (card === "p" && bot_card_l === "r") {
+    console.log("Paper covers rock\nPlayer win");
+    playerWin();
+  } else if (card === "p" && bot_card_l === "s") {
+    console.log("Scissors cuts paper\nBot win");
+    botWin();
+  } else if (card === "s" && bot_card_l === "p") {
+    console.log("Scissors cuts paper\nPlayer win");
+    playerWin();
+  }
+}
 rock_card.onclick = () => {
   // console.log("rock");
   card = "r";
