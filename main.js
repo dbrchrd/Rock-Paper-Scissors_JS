@@ -12,6 +12,8 @@ let rock_card_bot = bot_card[0];
 let paper_card_bot = bot_card[1];
 let scissors_card_bot = bot_card[2];
 let end_screen = document.querySelector(".end-screen");
+let end_screen_you = document.querySelector("#you");
+let end_screen_wl = document.querySelector("#wl");
 // console.log(rock_card, paper_card, scissors_card);
 const botPlay = () => {
   let bot_card_int = parseInt((Math.random() * (3 - 1 + 1)), 10) + 1;
@@ -74,14 +76,17 @@ const result = () => {
 const playerWin = () => {
   player.style.backgroundImage = "linear-gradient(to right, #0F0 40%, #FF0)";
   bot.style.backgroundImage = "linear-gradient(to left, #F00 40%, #FF0)";
+  end_screen_wl.innerHTML = "WIN !";
 }
 const botWin = () => {
   player.style.backgroundImage = "linear-gradient(to right, #F00 40%, #FF0)";
   bot.style.backgroundImage = "linear-gradient(to left, #0F0 40%, #FF0)";
+  end_screen_wl.innerHTML = "LOSE !";
 }
 const equality = () => {
   player.style.background = "#FF0";
   bot.style.background = "#FF0";
+  end_screen_you.innerHTML = "EQUALITY !";
 }
 rock_card.onclick = () => {
   // console.log("rock");
