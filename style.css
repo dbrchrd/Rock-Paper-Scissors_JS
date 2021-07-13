@@ -34,9 +34,17 @@ body {
   background: #FFFF00;
 }
 .sep-display {
+  z-index: 100;
+  font-size: 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+}
+.sep-display * {
+  text-align: center;
+}
+.sep-display .sep-vs {
+  margin: 66px;
 }
 .bot {
 
