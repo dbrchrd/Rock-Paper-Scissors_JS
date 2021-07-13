@@ -27,9 +27,16 @@ body {
 }
 .sep {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 14%;
   height: 100%;
   background: #FFFF00;
+}
+.sep-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .bot {
 
