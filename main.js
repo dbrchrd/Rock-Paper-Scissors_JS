@@ -1,19 +1,19 @@
-let player = document.querySelectorAll(".player")[0];
-let bot = document.querySelectorAll(".player")[1];
-let win = "nobody";
-let player_card = document.querySelectorAll(".card");
-let rock_card = player_card[0];
-let paper_card = player_card[1];
-let scissors_card = player_card[2];
-let card = "No card";
-let bot_card_l = "No card";
-let bot_card = document.querySelectorAll(".cardbot");
-let rock_card_bot = bot_card[0];
-let paper_card_bot = bot_card[1];
-let scissors_card_bot = bot_card[2];
-let end_screen = document.querySelector(".end-screen");
-let end_screen_you = document.querySelector("#you");
-let end_screen_wl = document.querySelector("#wl");
+let player = document.querySelectorAll(".player")[0]; // Init variable
+let bot = document.querySelectorAll(".player")[1]; // Init variable
+let win = "nobody"; // Init variable
+let player_card = document.querySelectorAll(".card"); // Init variable
+let rock_card = player_card[0]; // Init variable
+let paper_card = player_card[1]; // Init variable
+let scissors_card = player_card[2]; // Init variable
+let card = "No card"; // Init variable
+let bot_card_l = "No card"; // Init variable
+let bot_card = document.querySelectorAll(".cardbot"); // Init variable
+let rock_card_bot = bot_card[0]; // Init variable
+let paper_card_bot = bot_card[1]; // Init variable
+let scissors_card_bot = bot_card[2]; // Init variable
+let end_screen = document.querySelector(".end-screen"); // Init variable
+let end_screen_you = document.querySelector("#you"); // Init variable
+let end_screen_wl = document.querySelector("#wl"); // Init variable
 // console.log(rock_card, paper_card, scissors_card);
 const botPlay = () => {
   let bot_card_int = parseInt((Math.random() * (3 - 1 + 1)), 10) + 1;
