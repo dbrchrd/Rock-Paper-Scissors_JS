@@ -15,8 +15,8 @@ let end_screen = document.querySelector(".end-screen"); // Init variable
 let end_screen_you = document.querySelector("#you"); // Init variable
 let end_screen_wl = document.querySelector("#wl"); // Init variable
 // console.log(rock_card, paper_card, scissors_card);
-const botPlay = () => {
-  let bot_card_int = parseInt((Math.random() * (3 - 1 + 1)), 10) + 1;
+const botPlay = () => { // Init botPlay function
+  let bot_card_int = parseInt((Math.random() * (3 - 1 + 1)), 10) + 1; // Randomize bot choice
   switch (bot_card_int) {
     case 1:
     bot_card_l = "r"
@@ -30,7 +30,7 @@ const botPlay = () => {
     default:
       "No card"
   }
-  return bot_card;
+  return bot_card; // Return choice
 }
 const botDisplay = () => {
   if (bot_card_l === "r") {
