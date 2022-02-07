@@ -37,6 +37,7 @@ body {
   z-index: 100;
   font-size: 50px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -44,7 +45,7 @@ body {
   text-align: center;
 }
 .sep-display .sep-vs {
-  margin: 66px;
+  /* margin: 66px; */
 }
 .bot {
 
